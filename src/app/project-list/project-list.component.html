@@ -1,0 +1,28 @@
+<h1>List of Projects: </h1>
+<div class="input-wrap">
+  <p-table responsiveLayout="scroll" [value]="projects">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description </th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-project>
+      <tr>
+        <td>{{project.id}}</td>
+        <td>{{project.title}}</td>
+        <td>{{project.description}}</td>
+        <td>{{project.startDate}}</td>
+        <td>{{project.endDate}}</td>
+        <td class="butt">
+          <button pButton type="button" label="Delete"  (click)="onDelete(project.id)" class="p-button-danger"></button>
+          <button pButton type="button" label="Modify"  (click)="onModify(project.id)" class="p-button-info"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+

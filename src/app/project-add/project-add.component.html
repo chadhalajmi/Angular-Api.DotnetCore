@@ -1,0 +1,24 @@
+<h1>Add new project :</h1>
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()" class="form">
+  <div style="margin-top: 3%;"></div>
+  <span class="p-float-label">
+    <input id="float-input" type="text" formControlName="Title" pInputText>
+    <label for="float-input">Username</label>
+</span>
+<div style="margin-top: 3%;"></div>
+<span class="p-float-label">
+  <input id="float-input" type="text" formControlName="Description" pInputText>
+  <label for="float-input">Description</label>
+</span>
+<div style="margin-top: 3%;"></div>
+<span class="p-float-label">
+  <input id="float-input" type="datetime" formControlName="StartDate" pInputText>
+  <label for="float-input">StartDate</label>
+</span>
+<div style="margin-top: 3%;"></div>
+<span class="p-float-label">
+  <input id="float-input" type="datetime" formControlName="EndDate" pInputText>
+  <label for="float-input">EndDate</label>
+</span>
+<button pButton type="submit" class="p-button-raised p-button-rounded">Add </button>
+</form>
